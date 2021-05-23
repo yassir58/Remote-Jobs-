@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="http://localhost:3000/assets/styles.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/da5e55aecd.js" crossorigin="anonymous"></script>
+  <title>Document</title>
+</head>
+
+<style>
+ 
+</style>
+<body>
+  <%- include('./partials/header'); -%>
+
+<div class="search-area" style="background-image: url(http://localhost:3000/images/backgroundImg.png);">
+  <div class="head-area">
+    <div class="head"></div>
+  </div>
+</div>
+
+
+  
+<main class="main-section">
+  <div class="filter-area">
+
+  <div class="full-time">
+    <input type="checkbox" name="" id="checkbox">
+  <label for="checkbox"> full time </label>
+  </div>
+  
+  <h2>Location</h2>
+  <hr>
+
+<form action="" class="radio-form">
+  <div>
+    <input type="radio" data-pattern ="Global" id="global" name="location" value="global">
+    <label for="global">Global</label>
+  </div>
+  <div>
+    <input type="radio" data-pattern ="Europe" id="europe" name="location" value="europe">
+    <label for="europe">Europe</label>
+  </div>
+  <div>
+    <input type="radio" data-pattern ="USA Only" id="us-only" name="location" value="us-only">
+    <label for="us-only">USA only</label>
+  </div>
+    
+</form>
+
+<hr>
+<div class="category_links">
+  <h2>Categories</h2>
+  <ul>
+    <li><a href="/categories/software-dev">Software development </a></li>
+    <li><a href="/categories/marketing">Marketing</a></li>
+    <li><a href="/categories/design">Design</a></li>
+    <li><a href="/categories/devops">DevOps</a></li>
+    <li><a href="/categories/product">Product</a></li>
+    <li><a href="/categories/finance">Finance</a>
+    <li><a href="/categories/customer-support">Cutomer Support</a></li>
+    <li><a href="/categories/data">Data</a></li>
+  </ul>
+</div>
+  </div>
+ <div class="items-area">
+  <% data.jobs.slice(0,5).forEach(item=>{ %>
+    <job-item title="<%= item.title  %>" logo="<%=item.company_logo_url %>" category="<%=item.category%>" company= "<%=item.company_name %>"  location = "<%= item.candidate_required_location %>" job-type="<%= item.job_type  %>" time="<%=item.publication_date%>">
+    
+      <div slot="time"><i class="far fa-clock"></i></div>
+      <div slot="location"> <i class="fas fa-globe-europe"></i></div>
+    </job-item>
+  <% })  %>
+  <% var dataArr = data.jobs ;  %>
+  <div class="button_controllers">
+    <button-controller number="1"></button-controller>
+    <button-controller number="2"></button-controller>
+    <button-controller number="3"></button-controller>
+    <button-controller number="4"></button-controller>
+       </div>
+ </div>
+   
+</main>
+<div class="module_helper" data-helper ="<%= JSON.stringify(data) %>" ></div>
+ <%- include('./partials/footer'); -%>
+ <!--   -->
+ <script>
+
+document.querySelector(".head").innerText =JSON.parse( document.querySelector(".module_helper").dataset.helper).jobs[0].category + " jobs";
+ 
+ 
+ </script>
+ <script src="http://localhost:3000/javascript/script.js"></script>
+</body>
+</html>

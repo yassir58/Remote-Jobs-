@@ -1,0 +1,226 @@
+
+@import url('../node_modules/font-awesome/css/font-awesome.min.css'); 
+body {
+    background:#eeeeee;
+    font-family: 'Montserrat', sans-serif;
+    display:grid;
+    grid-template-rows: 80px 150px  1fr ;
+}
+
+.search-area {
+    width:80%;
+    height: 120px;
+    margin: 5px auto;
+    border-radius: 12px;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+}
+.my-form {
+    width:70%;
+    height: 60px;
+    border-radius:8px;
+    background: white;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5px;
+} .my-form input {
+    background-color: transparent;
+    padding:3px 5px ;
+    border:none;
+    outline: none;
+    color: #2c2828;
+    width: 400px;
+}
+.search-area .my-form input::placeholder {
+    font-size:13px;
+    color: grey;
+}
+.search-area form button {
+    background-color: #233e8b;
+    color:white ;
+    font-size: 13px;
+    width: 100px;
+    height:50px;
+    border-radius:8px;
+    border:none;
+    outline:none ;
+}
+.search-area button:hover {
+    background-color: #233f8bab;
+}
+b {
+    font-weight: 900;
+}
+.main-section {
+    width: 80%;
+    margin:5px auto;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    grid-gap:15px ;
+    position: relative;
+}
+
+.main-section ul li {
+    list-style:none;
+}
+.main-section ul li label {
+    font-size:16px;
+    font-weight: 700;
+    color: #2c2828;
+    padding-left: 3px;
+}
+.button_controllers {
+    display: flex;
+    justify-content:space-around;
+   width: 210px;
+   justify-self: end;
+   margin-left:40px;
+    /* position: absolute;
+    bottom:-40px;
+    right:100px; */
+}
+input[type="radio"] , input[type="checkbox"]{
+    
+        margin: .4rem;
+    
+}
+
+.category_links {
+    width:350px;
+    margin-top: 50px;
+    margin-left: -20px;
+}
+.category_links h2 {
+    color: #233e8b;
+    margin-left: 25px;
+}
+.category_links ul {
+    display:flex ;
+    flex-direction: column;
+    justify-content: start;
+}
+.category_links ul li a {
+    color: #867ae9;
+    font-size: 14px;
+    border-bottom:1px solid grey;
+    text-align:left;
+    text-decoration: none;
+    list-style: none;
+    padding: 5px 3px;
+    margin:15px 0 ;
+    padding:10px ;
+   width: 250px;
+}
+.category_links ul li {
+    margin:10px 0;
+   
+   
+  
+}
+.category_links ul li :hover {
+background-color: #233e8b;
+color: white;
+}
+.head-area {
+    width: 80%;
+    margin: 20px auto;
+}
+.head {
+    color: white;
+    font-size:3vw;
+    text-align:left;
+    margin: 1em 0;
+    text-align: center;
+}
+
+.filter-area {
+    margin-top: 50px;
+}
+label {
+color:grey ;
+font-size: 14px;
+  }
+  .filter-area h2 {
+      color:#233e8b ;
+  }
+  .details-section {
+      width: 80%;
+      margin: 20px auto;
+  }
+  @media screen and (max-width:980px) {
+    .items-area {
+        width: 95%;
+        margin:15px auto ;
+        display: flex;
+        flex-wrap:wrap;
+    }
+    
+  }
+  @media screen and (max-width:980px){
+    .main-section {
+      width: 90%;
+      margin:5px auto;
+      display:flex;
+      flex-direction: column-reverse;
+     justify-content:center ;
+      position: relative;
+  }
+  .filter-area {
+    width:90%;
+    margin: 10px auto;
+}
+.category_links {
+    text-align: center;
+    margin: 10px auto;
+}
+
+}
+.main_404 {
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+.banner-area {
+    width:80%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+.banner-area img {
+    width:450px;
+    height:auto;
+}
+.banner-area a {
+    color:white ;
+    border: none;
+    border-radius: 12px;
+    background-color: #867ae9;
+    padding:15px 12px ;
+    text-decoration:none;
+    outline:none ;
+    width:160px ;
+    margin:15px auto ;
+}
+.banner-area a:hover {
+    background-color: #7a6fe4c9;
+}
+ .far , .fas {
+    color : grey ;
+    margin: 0 5px;
+  }
+
+  li {
+      list-style:none;
+  }
+  
+  .search-header {
+      font-size: 2vw;
+      color:#233e8b ;
+      margin-right: -20px;
+  }

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="http://localhost:3000/assets/styles.css">
+    <script src="https://kit.fontawesome.com/da5e55aecd.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    <%- include('./partials/header'); -%>
+
+   
+    
+     <description-area test="<%=data.description%>"  logo="<%=data.company_logo_url %>" title="<%=data.title %>"  location="<%=data.candidate_required_location %>"  company="<%= data.company_name %>" time="<%= data.publication_date %>">
+        <div slot="time"><i class="far fa-clock"></i></div>
+        <div slot="location"> <i class="fas fa-globe-europe"></i></div>
+    </description-area>
+  
+
+
+
+
+
+   
+    
+
+ 
+
+
+    <script src="http://localhost:3000/javascript/client.js"></script>
+</body>
+</html>
