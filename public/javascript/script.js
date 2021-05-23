@@ -153,7 +153,8 @@ i {
 
 @media screen and (max-width:430px){
   .item {
-    width:90%;
+    width:auto;
+    max-width:95% ;
   }
 }
   </style>

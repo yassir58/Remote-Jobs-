@@ -10,7 +10,7 @@ disc_template.innerHTML= `
 <aside class="side_links">
 
 
-<a class="back-link" href="http://localhost:3000/">Back To Search &#129046; </a>
+<a class="back-link" href="/">Back To Search &#129046; </a>
 
 <p class="small-title"> HOW TO APPLY</p>
 
