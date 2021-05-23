@@ -233,7 +233,7 @@ this.shadowRoot.querySelector(".location").innerHTML = `   ${location.split(/\//
 }
 connectedCallback(){
   this.addEventListener('click',()=>{
-    location.replace(`http://localhost:3000/details/${this.getAttribute("category")}/${this.getAttribute("id")}`)
+    location.replace(`https://sleepy-tor-38724.herokuapp.com/details/${this.getAttribute("category")}/${this.getAttribute("id")}`)
    
   })
 }
